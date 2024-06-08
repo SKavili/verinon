@@ -13,18 +13,18 @@ public class EmployeeDAO {
         Transaction transaction = null;
         System.out.println("VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV#17 beg"+employee);
 
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-
+        try {
+            Session session = HibernateUtil.getSessionFactory().openSession();
+            System.out.println("18*********************************************88");
             transaction = session.beginTransaction();
             System.out.println(transaction.isActive());;
             System.out.println("VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV19 beg"+employee);
             session.save(employee);
         System.out.println("VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV#22 bef"+employee);
-
+           transaction.commit();
             session.close();
         System.out.println("###################################################17 af"+employee);
 
-            transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
@@ -35,9 +35,14 @@ public class EmployeeDAO {
     }
 
     public List<Employee> getEmployees() {
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            return session.createQuery("from Employee", Employee.class).list();
+        List<Employee> list = null;
+                    try {
+                        Session session = HibernateUtil.getSessionFactory().openSession() ;
+            list =  session.createQuery("from Employee", Employee.class).list();
+        }catch(Exception e){
+
         }
+        return list;
     }
 
     public Employee getEmployee(Long id) {
@@ -67,7 +72,7 @@ public class EmployeeDAO {
             Employee employee = session.get(Employee.class, id);
             if (employee != null) {
                 session.delete(employee);
-                System.out.println("Employee is deleted");
+               
             }
             transaction.commit();
         } catch (Exception e) {

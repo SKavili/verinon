@@ -10,20 +10,19 @@ public class HibernateUtil {
     static {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
-        System.out.println("###################################################13"+sessionFactory);
-
+      
         } catch (Throwable ex) {
             throw new ExceptionInInitializerError(ex);
         }
     }
 
     public static SessionFactory getSessionFactory() {
-        System.out.println("###################################################21"+sessionFactory);
+      
         return sessionFactory;
     }
 
     public static void shutdown() {
-        System.out.println("###################################################26 closed"+sessionFactory);
+        
         getSessionFactory().close();
     }
 }
