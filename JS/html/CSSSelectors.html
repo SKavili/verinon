@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors Example</title>
+    <style>
+        /* Universal Selector */
+        * {
+            margin: 11;
+            padding: 5;
+        }
+
+        /* Type Selector */
+        p {
+            font-size: 16px;
+        }
+
+        /* Class Selector */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* ID Selector */
+        #header {
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        /* Attribute Selector */
+        a[target="_blank"] {
+            color: red;
+        }
+
+        /* Descendant Selector */
+        .container p {
+            font-size: 14px;
+        }
+
+        /* Child Selector */
+        .container > p {
+            font-weight: bold;
+        }
+
+        /* Adjacent Sibling Selector */
+        h1 + p {
+            margin-top: 0;
+        }
+
+        /* General Sibling Selector */
+        h1 ~ p {
+            color: gray;
+        }
+
+        /* Pseudo-class Selector */
+        a:hover {
+            color: blue;
+        }
+
+        /* Pseudo-element Selector */
+        p::first-line {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Welcome to My Website</h1>
+        <p>This is a subtitle</p>
+    </div>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lorem vitae lectus luctus laoreet.</p>
+        <a href="https://example.com" target="_blank">Visit Example.com</a>
+    </div>
+</body>
+</html>

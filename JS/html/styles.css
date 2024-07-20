@@ -1,0 +1,14 @@
+
+section {
+    background-color: blue;
+    border-width: 1px;
+    width: 100px;
+    height: 100px;
+}
+
+div {
+    background-color: green;
+    border-width: 1px;
+    width: 100px;
+    height: 100px;
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A comprehensive HTML example">
+    <title>HTML Tag Example</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        header, footer {
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the HTML Tag Example</h1>
+        <nav>
+            <ul>
+                <li><a href="#content">Content</a></li>
+                <li><a href="#list">Lists</a></li>
+                <li><a href="#form">Form</a></li>
+                <li><a href="#table">Table</a></li>
+                <li><a href="#media">Media</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="content">
+            <h2>Content Section</h2>
+            <p>This is a paragraph with some <strong>bold</strong>, <em>italic</em>, and <u>underlined</u> text.</p>
+            <p>Here's a <mark>highlighted</mark> text, and here is <small>small</small> text.</p>
+            <p>Subscript: H<sub>2</sub>O, Superscript: E = mc<sup>2</sup></p>
+            <blockquote>This is a blockquote example.</blockquote>
+            <hr>
+            <p>Here's a line break<br>Right here.</p>
+        </section>
+
+        <section id="list">
+            <h2>Lists</h2>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+            <ol>
+                <li>First item</li>
+                <li>Second item</li>
+                <li>Third item</li>
+            </ol>
+            <dl>
+                <dt>HTML</dt>
+                <dd>HyperText Markup Language</dd>
+                <dt>CSS</dt>
+                <dd>Cascading Style Sheets</dd>
+                <dt>JS</dt>
+                <dd>JavaScript</dd>
+            </dl>
+        </section>
+
+        <section id="form">
+            <h2>Form</h2>
+            <form action="/submit" method="post">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name"><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"><br><br>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+                    <label for="job">Job:</label>
+                    <select id="job" name="job">
+                        <option value="developer">Developer</option>
+                        <option value="designer">Designer</option>
+                        <option value="manager">Manager</option>
+                    </select><br><br>
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="table">
+            <h2>Table</h2>
+            <table>
+                <caption>Sample Table</caption>
+                <thead>
+                    <tr>
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                        <th>Header 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Row 1, Cell 1</td>
+                        <td>Row 1, Cell 2</td>
+                        <td>Row 1, Cell 3</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2, Cell 1</td>
+                        <td>Row 2, Cell 2</td>
+                        <td>Row 2, Cell 3</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Footer 1</td>
+                        <td>Footer 2</td>
+                        <td>Footer 3</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section id="media">
+            <h2>Media</h2>
+            <h3>Image</h3>
+            <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+            <h3>Audio</h3>
+            <audio controls>
+                <source src="audio-file.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <h3>Video</h3>
+            <video controls width="250">
+                <source src="video-file.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+            <h3>Embed</h3>
+            <embed src="embedded-content.html" width="300" height="200">
+        </section>
+
+        <section id="interactive">
+            <h2>Interactive Elements</h2>
+            <details>
+                <summary>More Information</summary>
+                <p>This is additional information that can be shown or hidden.</p>
+            </details>
+            <dialog open>
+                <p>This is a dialog box.</p>
+                <button onclick="this.parentElement.close()">Close</button>
+            </dialog>
+        </section>
+
+        <section id="scripting">
+            <h2>Scripting</h2>
+            <script>
+                document.write('Hello, this is a message from a script.');
+            </script>
+            <noscript>Your browser does not support JavaScript!</noscript>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 HTML Tag Example</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        .content {
+            margin: 70px 0; /* Adjust this margin if necessary */
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Include the header -->
+    <div id="header"></div>
+
+    <!-- Main content of the dashboard -->
+    <div class="content">
+        <h2>Welcome to the Dashboard</h2>
+        <p>This is the main content area of the dashboard.</p>
+    </div>
+ 
+    <section   name="dummy2" id="dummy3" > content of section goes here  </section>
+
+    <!-- Include the footer -->
+    <div id="footer"></div>
+  
+    <script>
+        // Load header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+
+                // Load footer
+        fetch('TextBox.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('dummy3').innerHTML = data;
+            });
+
+
+        // Load footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    
+    </script>
+</body>
+</html>
