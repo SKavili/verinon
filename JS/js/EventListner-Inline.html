@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inline Event Listeners</title>
+    <style>
+        .hover-box {
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function btnclk(){
+        alert('Button clicked!')
+    }
+    </script>
+</head>
+<body>
+    <h1>Inline Event Listeners Example</h1>
+
+    <!-- onclick Event -->
+    <button onclick="btnclk()">Click Me</button>
+
+    <!-- onmouseover Event -->
+    <div class="hover-box" onmouseover="this.style.backgroundColor='yellow';" onmouseout="this.style.backgroundColor='';">
+        Hover over me
+    </div>
+
+    <!-- onchange Event -->
+    <input type="text" onchange="alert('Text changed!')" placeholder="Type something here">
+
+    <!-- onfocus and onblur Events -->
+    <input type="text" onfocus="this.style.backgroundColor='lightblue';" onblur="this.style.backgroundColor='';" placeholder="Focus on me">
+
+    <!-- onsubmit Event -->
+    <form onsubmit="alert('Form submitted!'); return false;">
+        <input type="text" placeholder="Enter something">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
