@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic HTML with JavaScript</title>
+    <script>
+        f1();
+        // "use strict";
+        console.log(globalvar);
+        console.log(globalvar3);
+        globalvar=90;
+        var globalvar;
+    
+
+        var globalvar3=90;
+
+        console.log(globalvar);
+        console.log(globalvar3);
+
+
+        function f1() {
+      
+            h=20;
+            h="55";
+            var x;
+            var y = undefined;
+x=0;
+x="77";
+            // Logging the types of variables x and y
+            console.log(typeof(x)); // "undefined"
+            console.log(typeof(y)); // "undefined"
+
+            // Storing the types in variables
+            var z1 = typeof(x); // "undefined"
+            var z2 = typeof(y); // "undefined"
+
+            // Comparing the types
+            console.log(z1 == z2);  // true
+            console.log(z1 === z2); // true
+
+            // Example of an object with a series of values and key-value pairs
+            var obj = {
+                name: "John",
+                age: 30,
+                hobbies: ["reading", "travelling", "swimming"],
+                address: {
+                    street: "123 Main St",
+                    city: "Anytown",
+                    country: "USA"
+                }
+            };
+
+            var obj1 = ["reading", "travelling", "swimming"];
+            console.log(typeof(obj)); // "object"
+            console.log(obj);
+            console.log("obj1===="+ obj1);
+
+            // Accessing series of values (array) within the object
+            console.log(obj.hobbies); // ["reading", "travelling", "swimming"]
+            console.log(obj.hobbies[0]); // "reading"
+
+            // Accessing nested object properties
+            console.log(obj.address); // { street: "123 Main St", city: "Anytown", country: "USA" }
+            console.log(obj.address.city); // "Anytown"
+
+            var Obj2 = new Object();
+            Obj2.j="Rayachoty";
+            Obj2.a="Kadapa";
+            console.log(Obj2.a); // "Anytown"
+
+        }
+    </script>
+</head>
+<body onload="f1()">
+    Hello
+</body>
+</html>
