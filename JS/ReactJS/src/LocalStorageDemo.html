@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocalStorage Example</title>
+  <style>
+    body.light-mode {
+      background-color: white;
+      color: black;
+    }
+    body.dark-mode {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the LocalStorage Example</h1>
+  <div id="tempid"> </div>
+  <button id="toggleThemeBtn">Toggle Theme</button>
+
+  <script>
+    // Function to set the theme
+    function setTheme(theme) {
+      document.body.className = theme;
+      localStorage.setItem('theme', theme);
+      localStorage.setItem('name', "Suresh");
+    }
+        // Function to set the theme
+        function dummy2() {
+     
+            let name = localStorage.getItem('name');
+      let tempElement = document.getElementById("tempid");
+      tempElement.innerText=name;
+    }
+
+    // Get the saved theme from localStorage
+    let savedTheme = localStorage.getItem('theme');
+
+    // Apply the saved theme if it exists, otherwise default to light mode
+    if (savedTheme) {
+      setTheme(savedTheme);
+    } else {
+      setTheme('light-mode');
+    }
+
+    // Toggle theme button functionality
+    document.getElementById('toggleThemeBtn').addEventListener('click', function() {
+      let currentTheme = localStorage.getItem('theme');
+      let newTheme = currentTheme === 'light-mode' ? 'dark-mode' : 'light-mode';
+      setTheme(newTheme);
+       dummy2();
+   
+    });
+  </script>
+</body>
+</html>
