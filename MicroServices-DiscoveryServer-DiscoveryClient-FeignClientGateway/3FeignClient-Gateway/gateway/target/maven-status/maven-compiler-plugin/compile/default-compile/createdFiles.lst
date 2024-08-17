@@ -1,0 +1,4 @@
+com\cbs\userservice\userservice\UserserviceApplication.class
+com\cbs\userservice\userservice\UserController.class
+com\cbs\userservice\userservice\ExampleClient.class
+com\cbs\userservice\userservice\ExampleController.class
